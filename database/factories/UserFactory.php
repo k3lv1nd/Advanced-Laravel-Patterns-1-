@@ -26,5 +26,3 @@ $factory->define(App\Employee::class, function (Faker $faker) {
         'name' => $faker->name,
         'designation' => $faker->title,
 
-    ];
-});
