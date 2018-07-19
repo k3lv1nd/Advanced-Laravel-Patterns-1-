@@ -14,8 +14,10 @@ class CompanyServer
 
         return $companies;
     }
-    public function addCompany(){
-            Company::create(array(
+
+    public function addCompany()
+    {
+        Company::create(array(
             'name' => Input::get('name'),
             'location' => Input::get('location'),
             'servicies' => Input::get('servicies'),

@@ -21,5 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/employeeform', 'EmployeeController@create')->name('getemployeeform');
 
 Route::post('/addemployee','EmployeeController@store')->name('addemployee');
+Route::get('/departments','DepartmentController@index');
 
 

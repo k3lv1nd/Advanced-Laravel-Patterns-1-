@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\repositories\EmployeeRepository;
 use App\repositories\EmployeeRepositoryInterface;
+use App\Factories\DepartmentFactory;
+use PhpParser\Builder\Function_;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -28,5 +30,11 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         $this->app->singleton(EmployeeRepositoryInterface::class, EmployeeRepository::class);
+
+        $this->app->bind('DepartmentFactory', function()
+        {
+            return new DepartmentFactory;
+
+        });
     }
 }
